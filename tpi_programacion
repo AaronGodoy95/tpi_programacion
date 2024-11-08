@@ -1,2 +1,4 @@
 #tpi programacion
+#juego matematico
+#damos la bienvenida al usuario
 def main()
