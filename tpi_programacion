@@ -1,2 +1,5 @@
-#tpi programacion
-def main()
+from colorama import Fore
+
+print(Fore.LIGHTBLUE_EX+"¡¡",Fore.RED+"B",Fore.BLUE+"I",Fore.GREEN+"E",Fore.YELLOW+"N",Fore.WHITE+"V",Fore.RED+"E",Fore.BLUE+"N",Fore.GREEN+"I",Fore.YELLOW+"D",Fore.WHITE+"O",Fore.RED+"S",Fore.CYAN+"!!")
+print(Fore.BLUE+"     M",Fore.RED+"A",Fore.GREEN+"T",Fore.YELLOW+"E",Fore.BLUE+" T",Fore.RED+"O",Fore.GREEN+"U",Fore.YELLOW+"R")
+
