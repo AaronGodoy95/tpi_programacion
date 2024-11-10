@@ -1,5 +1,36 @@
 from colorama import Fore
-
 print(Fore.LIGHTBLUE_EX+"¡¡",Fore.RED+"B",Fore.BLUE+"I",Fore.GREEN+"E",Fore.YELLOW+"N",Fore.WHITE+"V",Fore.RED+"E",Fore.BLUE+"N",Fore.GREEN+"I",Fore.YELLOW+"D",Fore.WHITE+"O",Fore.RED+"S",Fore.CYAN+"!!")
-print(Fore.BLUE+"     M",Fore.RED+"A",Fore.GREEN+"T",Fore.YELLOW+"E",Fore.BLUE+" T",Fore.RED+"O",Fore.GREEN+"U",Fore.YELLOW+"R")
+print(Fore.BLUE+"       M",Fore.RED+"A",Fore.GREEN+"T",Fore.YELLOW+"E",Fore.BLUE+" T",Fore.RED+"O",Fore.GREEN+"U",Fore.YELLOW+"R",Fore.RESET)
+nombreusuario= str (input ("Ingresa tu nombre: "))
+edadusuario= int (input(f"Cuantos años tenes {nombreusuario}: "))
+nivel=int(input(f"{nombreusuario},seleccione el Nivel: \n Para nivel 1, ingresar 1. \n Para nivel 2, ingresa 2 \n Para nivel 3, ingresa 3 \n Ingrese el nivel:"))
+def menu_niveles():
+    nivel=int(input(f"{nombreusuario},seleccione el Nivel: \n Para nivel 1, ingresar 1. \n Para nivel 2, ingresa 2 \n Para nivel 3, ingresa 3 \n Ingrese el nivel:"))
+    #while nivel == [1,2,3]:
+       # print("Ingrese una opcion valida.")
+if nivel == 1:
+    print("¡¡Comencemos!!") 
+    R1=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    R2=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    R3=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    R4=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    R5=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    menu_niveles()
+elif nivel == 2:
+    R6=int(input("si 3 bolsitas con 7 caramelos en cada una, ¿cuantos caramelos tengo?: "))
+    R7=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    R8=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    R9=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    R10=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    menu_niveles()
+elif nivel == 3:
+    R6=int(input("si 3 bolsitas con 7 caramelos en cada una, ¿cuantos caramelos tengo?: "))
+    R7=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    R8=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    R9=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    R10=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+    menu_niveles()
+else:
+    print("Ingrese una opcion valida.")
+menu_niveles()
 
