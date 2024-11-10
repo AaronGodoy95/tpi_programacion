@@ -1,35 +1,51 @@
-from colorama import Fore
-print(Fore.LIGHTBLUE_EX+"¡¡",Fore.RED+"B",Fore.BLUE+"I",Fore.GREEN+"E",Fore.YELLOW+"N",Fore.WHITE+"V",Fore.RED+"E",Fore.BLUE+"N",Fore.GREEN+"I",Fore.YELLOW+"D",Fore.WHITE+"O",Fore.RED+"S",Fore.CYAN+"!!")
-print(Fore.BLUE+"       M",Fore.RED+"A",Fore.GREEN+"T",Fore.YELLOW+"E",Fore.BLUE+" T",Fore.RED+"O",Fore.GREEN+"U",Fore.YELLOW+"R",Fore.RESET)
+from colorama import Fore 
+
+print(Fore.RESET+"¡¡",Fore.BLUE+"B",Fore.BLUE+"I",Fore.GREEN+"E",Fore.YELLOW+"N",Fore.WHITE+"V",Fore.RED+"E",Fore.BLUE+"N",Fore.GREEN+"I",Fore.YELLOW+"D",Fore.WHITE+"O",Fore.RED+"S",Fore.CYAN+"!!")
+print(Fore.BLUE+"     M",Fore.RED+"A",Fore.GREEN+"T",Fore.YELLOW+"E",Fore.BLUE+" T",Fore.RED+"O",Fore.GREEN+"U",Fore.YELLOW+"R",Fore.RESET)
+
+def pantalla_principal():
+     nombreusuario= str (input ("Ingresa tu nombre: "))
+
 nombreusuario= str (input ("Ingresa tu nombre: "))
 edadusuario= int (input(f"Cuantos años tenes {nombreusuario}: "))
-nivel=int(input(f"{nombreusuario},seleccione el Nivel: \n Para nivel 1, ingresar 1. \n Para nivel 2, ingresa 2 \n Para nivel 3, ingresa 3 \n Ingrese el nivel:"))
+
+#pantalla_principal=False
+#pantalla_principal()
+
 def menu_niveles():
-    nivel=int(input(f"{nombreusuario},seleccione el Nivel: \n Para nivel 1, ingresar 1. \n Para nivel 2, ingresa 2 \n Para nivel 3, ingresa 3 \n Ingrese el nivel:"))
-    #while nivel == [1,2,3]:
-       # print("Ingrese una opcion valida.")
-if nivel == 1:
-    print("¡¡Comencemos!!") 
-    R1=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    R2=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    R3=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    R4=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    R5=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    menu_niveles()
-elif nivel == 2:
-    R6=int(input("si 3 bolsitas con 7 caramelos en cada una, ¿cuantos caramelos tengo?: "))
-    R7=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    R8=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    R9=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    R10=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    menu_niveles()
-elif nivel == 3:
-    R6=int(input("si 3 bolsitas con 7 caramelos en cada una, ¿cuantos caramelos tengo?: "))
-    R7=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    R8=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    R9=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    R10=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-    menu_niveles()
-else:
-    print("Ingrese una opcion valida.")
-menu_niveles()
+    menu=True
+menu=True
+while menu==True:
+    nivel=int(input(f",seleccione el Nivel: \n Para nivel SUMA RESTA, ingresar 1. \n Para nivel MULTIPLICAR DIVIDIR, ingresa 2 \n Para nivel DESAFIO COMBINADO, ingresa 3 \n Ingrese el nivel:"))
+
+    if nivel == 1:
+        print(Fore.YELLOW+"¡¡Comencemos!!\n RECORDA QUE TE PODES AYUDAR CON LAS MANOS ",Fore.RESET) 
+        R1=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
+        R2=int(input("Elvira vende tortas. El miércoles le encargaron 3 tortas de cumpleaños iguales. En cada una de ellas puso 8 velitas \n ¿cuantas velitas tuvo que comprar?: "))
+        R3=int(input("Fernanda junta tapitas de gaseosas. Ella tiene un paquete con 36 tapitas y la tía le trajo 14 más \n ¿cuantas tapitas tengo en total?: "))
+        R4=int(input("Un equipo de baloncesto ha conseguido 32 puntos en la primera mitad del partido y le quitarom 12 puntos en la segunda \n ¿cuantos puntos le quedan?: "))
+        R5=int(input("Fernando tiene 26 páginas completas de un álbum de figuritas. Si el álbum tiene 57 páginas \n ¿cuántas páginas le faltan completar a Fernando?: "))
+        print(Fore.GREEN+"FELICIDADES PASASTE EL NIVEL 1",Fore.RESET)
+
+    elif nivel == 2:
+        print(Fore.RED+"¡¡Comencemos!! a Recordar la tablas",Fore.RESET)
+        R6=int(input("si tengo 3 bolsitas con 7 caramelos en cada una, \n ¿cuantos caramelos tengo?: "))
+        R7=int(input("La entrada al cine para los mayores cuesta $6 y para los menores $4. El papá de Adrián va a ir con su hijo y cuatro amiguitos de Adrián. \n ¿Cuánto costara en total las entradas del cine?: "))
+        R8=int(input("Dorín trabaja en una panadería envasando bandejas de facturas. Si envasa 50 facturas en 5 cajas, colocando en todas la misma cantidad,\n ¿cuántas facturas caben en cada bandeja?: "))
+        R9=int(input("Gerardo, el bibliotecario de la escuela, dejó 42 libros para las 6 mesas de 3.º grado.\n ¿Cuántos libros habrá que poner en cada mesa para que en todas haya la misma cantidad?: "))
+        R10=int(input("Una silla tiene 4 patas. Si en un aula hay 30 sillas, \n ¿cuántas patas hay en total?: "))
+        print(Fore.GREEN+"FELICIDADES PASASTE EL NIVEL 2",Fore.RESET)
+
+    elif nivel == 3:
+        print(Fore.BLUE+"¡¡Comencemos!! no olvides del orden de resolucion: 1 multiplicar 2 dividir y por ultimo suma resta",Fore.RESET)
+        R6=int(input("La entrada al cine para los mayores cuesta $6 y para los menores $4. El papá de Adrián va a ir con su hijo y cuatro amiguitos de Adrián. \n ¿Cuánto costara en total las entradas del cine?: "))
+        R7=int(input("ejercicio matematico combinado"))
+        R8=int(input("ejercicio matematico combinado"))
+        R9=int(input("ejercicio matematico combinado"))
+        R10=int(input("ejercicio matematico combinado"))
+        print(Fore.GREEN+"FELICIDADES TERMINASTE TODOS LOS NIVELES",Fore.RESET)
+        pantalla_principal ()
+
+    else:
+            print(Fore.RED+"********Ingrese una opcion valida.********",Fore.RESET)
+            menu_niveles()
