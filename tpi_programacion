@@ -1,52 +1,47 @@
-from colorama import Fore 
-import os
+from colorama import Fore #libreria para agregarle colores a los caracteres
+import os #libreria para poder "limpar la pantalla
 
 # BIENVENIDA Y RETORNO AL FINALIZAR NIVEL 3
 
-def pantalla_principal():
-    os.system("cls")
+def pantalla_principal(): #se define la funcion "pantalla_principal" para poder llamarla despues
+    os.system("cls") #se limpia la pantalla
     print(Fore.BLUE+"***********************************************")
     print(Fore.RED+"**********¡¡",Fore.BLUE+"B",Fore.BLUE+"I",Fore.GREEN+"E",Fore.YELLOW+"N",Fore.WHITE+"V",Fore.RED+"E",Fore.BLUE+"N",Fore.GREEN+"I",Fore.YELLOW+"D",Fore.WHITE+"O",Fore.RED+"S",Fore.RED+"!!**********")
     print("                       A")
     print(Fore.RED+"**********     M",Fore.RED+"A",Fore.GREEN+"T",Fore.YELLOW+"E",Fore.BLUE+" T",Fore.RED+"O",Fore.GREEN+"U",Fore.RED+"R      **********")
     print(Fore.BLUE+"***********************************************")
     print(Fore.YELLOW+"___un paseo por el camino de las matematicas___")
-    nombreusuario= str(input (Fore.GREEN+"Ingresa tu nombre: "))
-    print("Hola", nombreusuario)
-    while True:
+    nombreusuario= str(input (Fore.GREEN+"Ingresa tu nombre: ")) #se pide al usuario que ingrese su nombre
+    print("Hola", nombreusuario) #se saluda al usuario utilizando el nombre que nos dio
+    while True: # dentro de este while esta el try-except que evita el ValueError cuando se ingresa un caracter en vez de un entero
         try:
-            edadusuario=int(input("¿Cuantos años tenes? : "))
+            edadusuario=int(input("¿Cuantos años tenes? : ")) #se pide al usuario que ingrese su edad
         except ValueError:
             print(Fore.RED+"¡¡¡ UUUUUPS !!!, parece que has cometido un pequeño error.\n", Fore.GREEN+" Intenta de nuevo")
         else:
             break
 
-pantalla_principal()
+pantalla_principal() #se llama a pantalla principal
 
-# RETORNO POR ERROR
-
-def menu_niveles():
+def menu_niveles(): #se define la funcion "menu_niveles" para poder llamarla despues
     menu=True
 
-# MENU DE NIVELES
-
 menu=True
-while menu==True:
-    while True:
+while menu==True: #dentro de este while se encuentran los niveles
+    while True: #dentro de este while se elije el nivel a jugar
         try:
-         nivel=int(input(Fore.RED+" Para jugar al nivel 1: ***SUMA RESTA***, ingresa 1. \n Para jugar al nivel 2: ***MULTIPLICAR DIVIDIR***, ingresa 2 \n Para jugar al nivel 3: ***DESAFIO COMBINADO***, ingresa 3 \n Ingresa el numero del nivel que quieres:"))
-        except ValueError:
+         nivel=int(input(Fore.RED+" Para jugar al nivel 1: ***SUMA RESTA***, ingresa 1. \n Para jugar al nivel 2: ***MULTIPLICAR DIVIDIR***, ingresa 2 \n Para jugar al nivel 3: ***DESAFIO COMBINADO***, ingresa 3 \n Para salir ingresa 4 \n Ingresa el numero del nivel que quieres:"))
+        except ValueError: 
             print(Fore.RED+"¡¡¡ UUUUUPS !!!, parece que has cometido un pequeño error.\n", Fore.GREEN+" Intenta de nuevo")
         else:
             break
-        # NIVEL 1
 
-    if nivel == 1:
+    if nivel == 1: #nivel 1
         contador=0
-        os.system("cls")
+        os.system("cls") #se limpia la pantalla
         print(Fore.YELLOW+"¡¡Comencemos!!\n RECORDA QUE TE PODES AYUDAR CON LAS MANOS ",Fore.RESET) 
-        R1=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: "))
-        if R1==26:
+        R1=int(input("si tengo 14 manzanas y juan me regala 12 \n ¿cuantas tengo en total?: ")) #se realiza una pregunta
+        if R1==26: #si la pregunta coincide con la respuesta se suman puntos
             contador=contador+2
         R2=int(input("Elvira vende tortas. El miércoles le encargaron 8 tortas iguales. Pero ya tiene 3 hechas  \n ¿cuantas tortas tuvo que hacer?: "))
         if R2==5:
@@ -63,9 +58,7 @@ while menu==True:
         print(Fore.RED+"TU PUNTUACION FINAL FUE DE: ", contador,Fore.RESET)
         print(Fore.GREEN+"FELICIDADES TERMINASTE EL NIVEL 1",Fore.RESET)
 
-    # NIVEL 2
-
-    elif nivel == 2:
+    elif nivel == 2: #nivel 2 con el mismo formato que el nivel 1
         contador=0
         os.system("cls")
         print(Fore.YELLOW+"¡¡Comencemos!! A RECORDAR LAS TABLAS",Fore.RESET)
@@ -87,9 +80,7 @@ while menu==True:
         print(Fore.RED+"TU PUNTUACION FINAL FUE DE: ", contador,Fore.RESET)
         print(Fore.GREEN+"FELICIDADES TERMINASTE EL NIVEL 2",Fore.RESET)
 
-    # NIVEL 3
-
-    elif nivel == 3:
+    elif nivel == 3: #nivel 3 con el mismo formato que el nivel 1
         contador=0
         os.system("cls")
         print(Fore.YELLOW+"¡¡Comencemos!! No olvides del orden de resolucion: 1° parentesis, 2° multiplicar/dividir y por ultimo suma/resta ",Fore.RESET)
@@ -113,9 +104,10 @@ while menu==True:
         print(Fore.GREEN+"FELICIDADES TERMINASTE TODOS LOS NIVELES",Fore.RESET)
         pantalla_principal ()
 
-    # ERROR (OPCIONES VALIDAS 1, 2, 3)
-
-    else:
+    elif nivel == 4: #si el usuario presiona salir se llama a la pantalla principal
+        pantalla_principal ()
+    
+    else: #si ingresa un valor que no corresponde se pide que lo ingrese de nuevo
             os.system("cls")
             print(Fore.RED+"********Ingresa un numero valido.********",Fore.RESET)
             menu_niveles()
